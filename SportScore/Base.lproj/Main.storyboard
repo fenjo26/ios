@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKd-UH-CQn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="y8t-w6-JJs">
+            <objects>
+                <navigationController id="zKd-UH-CQn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="va5-wg-tyn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dg0-cF-mb0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hy7-ha-N9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-777" y="96"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -19,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4HL-pD-oGz">
-                                <rect key="frame" x="0.0" y="69" width="414" height="793"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="749"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="NS8-bd-b6v">
                                     <size key="itemSize" width="300" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -61,13 +77,108 @@
                             <constraint firstItem="4HL-pD-oGz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pfe-Ig-FEP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ph1-27-eTb"/>
                     <connections>
                         <outlet property="collectionView" destination="4HL-pD-oGz" id="stP-gq-zNh"/>
+                        <segue destination="OPs-Gc-acR" kind="show" identifier="segueToNews" id="Kv9-Nl-nab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29" y="95"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="P0U-H6-YQQ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="OPs-Gc-acR" customClass="NewsViewController" customModule="SportScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bVc-ww-suV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MC4-Et-FtF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="268" id="rRE-bg-FhO" customClass="NewsCell" customModule="SportScore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rRE-bg-FhO" id="9YO-KL-sIr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idw-YX-I51">
+                                                    <rect key="frame" x="10" y="20" width="394" height="248"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uic-Bv-Y4S">
+                                                            <rect key="frame" x="8" y="8" width="378" height="232"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rsa-kA-L7i">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="378" height="150"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="150" id="8Ty-8X-Leq"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ван Гал: завершил бы карьеру, если бы Нидерланды не вышли на ЧМ-2022" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9l-6d-dKF">
+                                                                    <rect key="frame" x="0.0" y="160" width="378" height="41"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-8G-zxE">
+                                                                    <rect key="frame" x="0.0" y="211" width="378" height="21"/>
+                                                                    <string key="text">Главный тренер сборной Нидерландов Луи ван Гал после победы над Норвегией (2:0) и выхода на ЧМ-2022 признался, что завершил бы карьеру, если бы его команда не сумела квалифицироваться на турнир в Катаре.
+</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Uic-Bv-Y4S" firstAttribute="top" secondItem="idw-YX-I51" secondAttribute="top" constant="8" id="0EX-a9-TV3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Uic-Bv-Y4S" secondAttribute="trailing" constant="8" id="Jht-hY-R69"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Uic-Bv-Y4S" secondAttribute="bottom" constant="8" id="SqI-Yp-Mui"/>
+                                                        <constraint firstItem="Uic-Bv-Y4S" firstAttribute="leading" secondItem="idw-YX-I51" secondAttribute="leading" constant="8" id="ytr-p9-XtW"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="idw-YX-I51" secondAttribute="bottom" id="1Jt-CN-4vQ"/>
+                                                <constraint firstItem="idw-YX-I51" firstAttribute="leading" secondItem="9YO-KL-sIr" secondAttribute="leading" constant="10" id="UeE-1u-Apu"/>
+                                                <constraint firstAttribute="trailing" secondItem="idw-YX-I51" secondAttribute="trailing" constant="10" id="WGs-MK-aNS"/>
+                                                <constraint firstItem="idw-YX-I51" firstAttribute="top" secondItem="9YO-KL-sIr" secondAttribute="top" constant="20" id="nWz-2V-faW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bodyView" destination="idw-YX-I51" id="GXs-sD-lWR"/>
+                                            <outlet property="descriptionLabel" destination="Ifs-8G-zxE" id="riH-fZ-aXr"/>
+                                            <outlet property="photoView" destination="rsa-kA-L7i" id="0U3-iO-8aC"/>
+                                            <outlet property="stackView" destination="Uic-Bv-Y4S" id="MR1-uz-MKg"/>
+                                            <outlet property="titleLabel" destination="O9l-6d-dKF" id="cUM-k0-i8h"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oMd-yJ-cwE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MC4-Et-FtF" firstAttribute="leading" secondItem="oMd-yJ-cwE" secondAttribute="leading" id="7rn-vQ-i7q"/>
+                            <constraint firstItem="oMd-yJ-cwE" firstAttribute="trailing" secondItem="MC4-Et-FtF" secondAttribute="trailing" id="QfQ-P0-3x4"/>
+                            <constraint firstItem="oMd-yJ-cwE" firstAttribute="bottom" secondItem="MC4-Et-FtF" secondAttribute="bottom" id="kh4-dW-c8p"/>
+                            <constraint firstItem="MC4-Et-FtF" firstAttribute="top" secondItem="oMd-yJ-cwE" secondAttribute="top" id="vIn-C8-Zcz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MeY-Yk-0Ag"/>
+                    <connections>
+                        <outlet property="tableView" destination="MC4-Et-FtF" id="TbO-ps-wy9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCK-Ff-Hl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814.49275362318849" y="95.758928571428569"/>
         </scene>
     </scenes>
     <resources>

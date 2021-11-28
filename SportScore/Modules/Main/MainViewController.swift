@@ -11,6 +11,16 @@ class MainViewController: UIViewController {
         return .lightContent
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -27,9 +37,9 @@ class MainViewController: UIViewController {
     
     private func setupMenu() {
         menuList = [
-            MenuModel(imageName: "main.news"),
-            MenuModel(imageName: "main.football"),
-            MenuModel(imageName: "main.basketball"),
+            MenuModel(imageName: Constants.Icons.news),
+            MenuModel(imageName: Constants.Icons.football),
+            MenuModel(imageName: Constants.Icons.basketball),
         ]
         collectionView.reloadData()
     }
@@ -57,7 +67,16 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(15151)
+        switch menuList[indexPath.row].imageName {
+        case Constants.Icons.news:
+            performSegue(withIdentifier: "segueToNews", sender: nil)
+        case Constants.Icons.football:
+            print(222)
+        case Constants.Icons.basketball:
+            print(333)
+        default:
+            break
+        }
     }
     
 }
