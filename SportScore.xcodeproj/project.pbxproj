@@ -17,6 +17,11 @@
 		AC4AD13E2752C87000754769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4AD13D2752C87000754769 /* Assets.xcassets */; };
 		AC4AD1412752C87000754769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4AD13F2752C87000754769 /* LaunchScreen.storyboard */; };
 		AC4AD14A2752C9BF00754769 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AD1492752C9BF00754769 /* Constants.swift */; };
+		AC6E4F662754D0A100037585 /* FootballService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E4F652754D0A100037585 /* FootballService.swift */; };
+		AC6E4F682754D17100037585 /* FootballResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E4F672754D17100037585 /* FootballResponse.swift */; };
+		AC6E4F6A2754D1C000037585 /* FootballModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E4F692754D1C000037585 /* FootballModel.swift */; };
+		AC6E4F6F2754D4BA00037585 /* FootballCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E4F6D2754D4BA00037585 /* FootballCell.swift */; };
+		AC6E4F702754D4BA00037585 /* FootballViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E4F6E2754D4BA00037585 /* FootballViewController.swift */; };
 		AC704B0F2752D3F300428AC7 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC704B0E2752D3F300428AC7 /* MenuModel.swift */; };
 		AC704B122752D54C00428AC7 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC704B112752D54C00428AC7 /* MainCell.swift */; };
 		ACE1944A275376DF00CBB9EC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE19449275376DF00CBB9EC /* NewsViewController.swift */; };
@@ -44,6 +49,11 @@
 		AC4AD1402752C87000754769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC4AD1422752C87000754769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC4AD1492752C9BF00754769 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC6E4F652754D0A100037585 /* FootballService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballService.swift; sourceTree = "<group>"; };
+		AC6E4F672754D17100037585 /* FootballResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballResponse.swift; sourceTree = "<group>"; };
+		AC6E4F692754D1C000037585 /* FootballModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballModel.swift; sourceTree = "<group>"; };
+		AC6E4F6D2754D4BA00037585 /* FootballCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballCell.swift; sourceTree = "<group>"; };
+		AC6E4F6E2754D4BA00037585 /* FootballViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballViewController.swift; sourceTree = "<group>"; };
 		AC704B0E2752D3F300428AC7 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		AC704B112752D54C00428AC7 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		ACE19449275376DF00CBB9EC /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -147,11 +157,29 @@
 		AC4AD14D2752CC6100754769 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC6E4F6B2754D4BA00037585 /* Football */,
 				AC0183DC2753FFE4001665BC /* Basketball */,
 				ACE1944B275376E900CBB9EC /* News */,
 				AC4AD14C2752CBD500754769 /* Main */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		AC6E4F6B2754D4BA00037585 /* Football */ = {
+			isa = PBXGroup;
+			children = (
+				AC6E4F6C2754D4BA00037585 /* Cells */,
+				AC6E4F6E2754D4BA00037585 /* FootballViewController.swift */,
+			);
+			path = Football;
+			sourceTree = "<group>";
+		};
+		AC6E4F6C2754D4BA00037585 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC6E4F6D2754D4BA00037585 /* FootballCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		AC704B102752D43500428AC7 /* Models */ = {
@@ -160,6 +188,7 @@
 				AC704B0E2752D3F300428AC7 /* MenuModel.swift */,
 				ACE1944C27537B8500CBB9EC /* NewsModel.swift */,
 				AC48324B2754AAFD00424196 /* BasketballModel.swift */,
+				AC6E4F692754D1C000037585 /* FootballModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +226,7 @@
 			children = (
 				ACE1945027537DCB00CBB9EC /* NewsService.swift */,
 				ACF8A66427540825000A1098 /* BasketballService.swift */,
+				AC6E4F652754D0A100037585 /* FootballService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -207,6 +237,7 @@
 				ACE194592753828300CBB9EC /* Protocols */,
 				ACE19454275380F000CBB9EC /* NewsResponse.swift */,
 				ACF8A666275409D5000A1098 /* BasketballResponse.swift */,
+				AC6E4F672754D17100037585 /* FootballResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -300,16 +331,21 @@
 			files = (
 				ACE1945127537DCB00CBB9EC /* NewsService.swift in Sources */,
 				ACE1944D27537B8500CBB9EC /* NewsModel.swift in Sources */,
+				AC6E4F682754D17100037585 /* FootballResponse.swift in Sources */,
 				AC4AD1392752C86F00754769 /* MainViewController.swift in Sources */,
 				AC4AD1352752C86F00754769 /* AppDelegate.swift in Sources */,
 				ACE1944F27537C5000CBB9EC /* Networking.swift in Sources */,
 				ACE1945C275386A200CBB9EC /* NewsCell.swift in Sources */,
 				AC704B122752D54C00428AC7 /* MainCell.swift in Sources */,
 				AC704B0F2752D3F300428AC7 /* MenuModel.swift in Sources */,
+				AC6E4F6F2754D4BA00037585 /* FootballCell.swift in Sources */,
+				AC6E4F662754D0A100037585 /* FootballService.swift in Sources */,
 				ACE1944A275376DF00CBB9EC /* NewsViewController.swift in Sources */,
 				ACE19455275380F000CBB9EC /* NewsResponse.swift in Sources */,
+				AC6E4F702754D4BA00037585 /* FootballViewController.swift in Sources */,
 				ACE194572753813D00CBB9EC /* ApiResponse.swift in Sources */,
 				AC48324F2754BCB300424196 /* BasketballCell.swift in Sources */,
+				AC6E4F6A2754D1C000037585 /* FootballModel.swift in Sources */,
 				ACF8A667275409D5000A1098 /* BasketballResponse.swift in Sources */,
 				AC4AD1372752C86F00754769 /* SceneDelegate.swift in Sources */,
 				ACF8A66527540825000A1098 /* BasketballService.swift in Sources */,

@@ -1,11 +1,11 @@
 
 import UIKit
 
-class BasketballViewController: UIViewController {
+class FootballViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var basketballList: [BasketballModel] = []
+    var footballList: [FootballModel] = []
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -30,9 +30,9 @@ class BasketballViewController: UIViewController {
     
     private func loadBasketball() {
         
-        BasketballService.getBasketball() { [weak self] (response) in
+        FootballService.getFootball() { [weak self] (response) in
             DispatchQueue.main.async {
-                self?.basketballList.append(contentsOf: response.basketballList)
+                self?.footballList.append(contentsOf: response.footballList)
                 self?.tableView.reloadData()
             }
         }
@@ -41,10 +41,10 @@ class BasketballViewController: UIViewController {
 
 }
 
-extension BasketballViewController: UITableViewDelegate, UITableViewDataSource {
+extension FootballViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        basketballList.count
+        footballList.count
     }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -56,8 +56,8 @@ extension BasketballViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? BasketballCell else { return UITableViewCell() }
-        let item = basketballList[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FootballCell else { return UITableViewCell() }
+        let item = footballList[indexPath.row]
         cell.set(item: item)
         return cell
     }

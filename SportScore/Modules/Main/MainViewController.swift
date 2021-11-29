@@ -71,7 +71,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case Constants.Icons.news:
             performSegue(withIdentifier: "segueToNews", sender: nil)
         case Constants.Icons.football:
-            print(222)
+            performSegue(withIdentifier: "segueToFootball", sender: nil)
         case Constants.Icons.basketball:
             performSegue(withIdentifier: "segueToBasketball", sender: nil)
         default:

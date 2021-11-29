@@ -21,11 +21,13 @@ struct Constants {
     struct Urls {
         static let news = "https://newsapi.org/v2/top-headlines"
         static let basketball = "https://api-basketball.p.rapidapi.com/games"
+        static let football = "https://api.football-data.org/v2/competitions/CL/matches"
     }
     
     struct ApiKeys {
         static let news = "da0342071531420ea792b5283027437d"
         static let basketball = "3955fbd355mshcca359fd5efac76p18e19cjsn31d9a8b0218d"
+        static let football = "f283cd8b31bc492792bd222efd9c4a8b"
     }
     
 }
