@@ -19,13 +19,13 @@ class NewsService {
             "apiKey": Constants.ApiKeys.news
         ]
         
-        Networking.shared.getData(link: Constants.Urls.news, params: params) { result in
+        Networking.shared.getData(link: Constants.Urls.news, params: params, headers: [:]) { result in
             
             do {
-                var productListResponse = NewsResponse()
-                productListResponse.decodeJson(json: result)
-                if let status = productListResponse.status, status == "ok" {
-                    complition(productListResponse)
+                var newsResponse = NewsResponse()
+                newsResponse.decodeJson(json: result)
+                if let status = newsResponse.status, status == "ok" {
+                    complition(newsResponse)
                 }
             } catch {
                 print(error)

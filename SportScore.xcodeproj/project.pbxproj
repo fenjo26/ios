@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0183DB2753FFC4001665BC /* BasketballViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0183DA2753FFC4001665BC /* BasketballViewController.swift */; };
+		AC48324C2754AAFD00424196 /* BasketballModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48324B2754AAFD00424196 /* BasketballModel.swift */; };
+		AC48324F2754BCB300424196 /* BasketballCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48324E2754BCB300424196 /* BasketballCell.swift */; };
 		AC4AD1352752C86F00754769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AD1342752C86F00754769 /* AppDelegate.swift */; };
 		AC4AD1372752C86F00754769 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AD1362752C86F00754769 /* SceneDelegate.swift */; };
 		AC4AD1392752C86F00754769 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AD1382752C86F00754769 /* MainViewController.swift */; };
@@ -24,9 +27,14 @@
 		ACE194572753813D00CBB9EC /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE194562753813D00CBB9EC /* ApiResponse.swift */; };
 		ACE1945C275386A200CBB9EC /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1945B275386A200CBB9EC /* NewsCell.swift */; };
 		ACE1945E27538CC900CBB9EC /* ImageNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1945D27538CC900CBB9EC /* ImageNetworking.swift */; };
+		ACF8A66527540825000A1098 /* BasketballService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8A66427540825000A1098 /* BasketballService.swift */; };
+		ACF8A667275409D5000A1098 /* BasketballResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8A666275409D5000A1098 /* BasketballResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC0183DA2753FFC4001665BC /* BasketballViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketballViewController.swift; sourceTree = "<group>"; };
+		AC48324B2754AAFD00424196 /* BasketballModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballModel.swift; sourceTree = "<group>"; };
+		AC48324E2754BCB300424196 /* BasketballCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketballCell.swift; sourceTree = "<group>"; };
 		AC4AD1312752C86F00754769 /* SportScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4AD1342752C86F00754769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC4AD1362752C86F00754769 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +54,8 @@
 		ACE194562753813D00CBB9EC /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		ACE1945B275386A200CBB9EC /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		ACE1945D27538CC900CBB9EC /* ImageNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworking.swift; sourceTree = "<group>"; };
+		ACF8A66427540825000A1098 /* BasketballService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketballService.swift; sourceTree = "<group>"; };
+		ACF8A666275409D5000A1098 /* BasketballResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketballResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0183DC2753FFE4001665BC /* Basketball */ = {
+			isa = PBXGroup;
+			children = (
+				AC48324D2754BCB300424196 /* Cells */,
+				AC0183DA2753FFC4001665BC /* BasketballViewController.swift */,
+			);
+			path = Basketball;
+			sourceTree = "<group>";
+		};
+		AC48324D2754BCB300424196 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC48324E2754BCB300424196 /* BasketballCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		AC4AD1282752C86F00754769 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +147,7 @@
 		AC4AD14D2752CC6100754769 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC0183DC2753FFE4001665BC /* Basketball */,
 				ACE1944B275376E900CBB9EC /* News */,
 				AC4AD14C2752CBD500754769 /* Main */,
 			);
@@ -131,6 +159,7 @@
 			children = (
 				AC704B0E2752D3F300428AC7 /* MenuModel.swift */,
 				ACE1944C27537B8500CBB9EC /* NewsModel.swift */,
+				AC48324B2754AAFD00424196 /* BasketballModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE1945027537DCB00CBB9EC /* NewsService.swift */,
+				ACF8A66427540825000A1098 /* BasketballService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,6 +206,7 @@
 			children = (
 				ACE194592753828300CBB9EC /* Protocols */,
 				ACE19454275380F000CBB9EC /* NewsResponse.swift */,
+				ACF8A666275409D5000A1098 /* BasketballResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -278,8 +309,13 @@
 				ACE1944A275376DF00CBB9EC /* NewsViewController.swift in Sources */,
 				ACE19455275380F000CBB9EC /* NewsResponse.swift in Sources */,
 				ACE194572753813D00CBB9EC /* ApiResponse.swift in Sources */,
+				AC48324F2754BCB300424196 /* BasketballCell.swift in Sources */,
+				ACF8A667275409D5000A1098 /* BasketballResponse.swift in Sources */,
 				AC4AD1372752C86F00754769 /* SceneDelegate.swift in Sources */,
+				ACF8A66527540825000A1098 /* BasketballService.swift in Sources */,
+				AC48324C2754AAFD00424196 /* BasketballModel.swift in Sources */,
 				AC4AD14A2752C9BF00754769 /* Constants.swift in Sources */,
+				AC0183DB2753FFC4001665BC /* BasketballViewController.swift in Sources */,
 				ACE1945E27538CC900CBB9EC /* ImageNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

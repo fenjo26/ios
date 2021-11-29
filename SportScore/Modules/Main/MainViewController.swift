@@ -73,7 +73,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case Constants.Icons.football:
             print(222)
         case Constants.Icons.basketball:
-            print(333)
+            performSegue(withIdentifier: "segueToBasketball", sender: nil)
         default:
             break
         }

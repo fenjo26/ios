@@ -6,7 +6,7 @@ class Networking {
     
     static let shared = Networking()
 
-    public func getData(link: String, params: [String: String], completion: @escaping (String) -> ()) {
+    public func getData(link: String, params: [String: String], headers: [String: String], completion: @escaping (String) -> ()) {
 
         let session = URLSession.shared
 
@@ -31,6 +31,9 @@ class Networking {
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
+        if !headers.isEmpty {
+            urlRequest.allHTTPHeaderFields = headers
+        }
 
         // Выполняем запрос по URL
         session.dataTask(with: urlRequest) { data, response, error in
