@@ -19,6 +19,7 @@ struct Constants {
     }
     
     struct Urls {
+        static let main = "https://loadapp.ru/show.json"
         static let news = "https://newsapi.org/v2/top-headlines"
         static let basketball = "https://api-basketball.p.rapidapi.com/games"
         static let football = "https://api.football-data.org/v2/competitions/CL/matches"

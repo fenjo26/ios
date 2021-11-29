@@ -83,6 +83,7 @@
                         <segue destination="OPs-Gc-acR" kind="show" identifier="segueToNews" id="Kv9-Nl-nab"/>
                         <segue destination="grB-Zm-Z6g" kind="show" identifier="segueToBasketball" id="OiA-by-STE"/>
                         <segue destination="Qmw-FG-KEE" kind="show" identifier="segueToFootball" id="3Ei-nH-4lp"/>
+                        <segue destination="LkR-9L-b0n" kind="presentation" identifier="segueToModal" id="9av-XN-qn9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -181,6 +182,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCK-Ff-Hl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="935" y="-625"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="SQC-He-FXu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="LkR-9L-b0n" customClass="ModalViewController" customModule="SportScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yf3-sr-eUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqc-3j-QN9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TzI-L7-2uj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jqc-3j-QN9" firstAttribute="leading" secondItem="TzI-L7-2uj" secondAttribute="leading" id="CyX-Jl-4tj"/>
+                            <constraint firstItem="TzI-L7-2uj" firstAttribute="trailing" secondItem="jqc-3j-QN9" secondAttribute="trailing" id="Fdx-8t-AGH"/>
+                            <constraint firstItem="TzI-L7-2uj" firstAttribute="bottom" secondItem="jqc-3j-QN9" secondAttribute="bottom" id="iOG-wT-w3O"/>
+                            <constraint firstItem="jqc-3j-QN9" firstAttribute="top" secondItem="TzI-L7-2uj" secondAttribute="top" id="okl-1P-iO3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="jqc-3j-QN9" id="ACh-1Q-Gbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bm9-tt-ywq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="804"/>
         </scene>
         <!--Basketball View Controller-->
         <scene sceneID="k9E-5T-0aj">

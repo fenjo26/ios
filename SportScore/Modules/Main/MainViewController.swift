@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupMenu()
+        loadMain()
     }
     
     private func setupUI() {
@@ -42,6 +43,33 @@ class MainViewController: UIViewController {
             MenuModel(imageName: Constants.Icons.basketball),
         ]
         collectionView.reloadData()
+    }
+    
+    private func loadMain() {
+        
+        MainlService.getMain() { [weak self] (response) in
+            guard let result = response.result else { return }
+            if result.show {
+                DispatchQueue.main.async {
+                    self?.showModal(link: result.link)
+                }
+            }
+        }
+        
+    }
+    
+    private func showModal(link: String) {
+        performSegue(withIdentifier: "segueToModal", sender: link)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueToModal" {
+            guard let modalViewController = segue.destination as? ModalViewController, let link = sender as? String else { return }
+            modalViewController.modalPresentationStyle = .fullScreen
+            modalViewController.setLink(link: link)
+        }
+        
     }
 
 }
