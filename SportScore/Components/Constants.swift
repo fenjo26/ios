@@ -10,6 +10,7 @@ struct Constants {
         static let title: UIColor = #colorLiteral(red: 0.01960784314, green: 0.2470588235, blue: 0.537254902, alpha: 1)
         static let description: UIColor = #colorLiteral(red: 0.1843137255, green: 0.1882352941, blue: 0.1921568627, alpha: 1)
         static let gray: UIColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        static let orange: UIColor = #colorLiteral(red: 0.8, green: 0.5411764706, blue: 0.02352941176, alpha: 1)
     }
     
     struct Icons {
@@ -27,6 +28,14 @@ struct Constants {
     
     struct MiniGameStrings {
         static let scoreMeta = "Очков"
+    }
+    
+    struct CalculatorStrings {
+        static let title = "Рассчитать выигрыш"
+        static let bet = "Сумма ставки"
+        static let coefficient = "Коэффициент"
+        static let calculate = "Рассчитать"
+        static let win = "Выигрыш"
     }
     
     struct Urls {

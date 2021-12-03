@@ -103,8 +103,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case Constants.Icons.miniGame:
             performSegue(withIdentifier: "segueToMiniGame", sender: nil)
         case Constants.Icons.calculator:
-            print("calculator")
-            //performSegue(withIdentifier: "segueToBasketball", sender: nil)
+            performSegue(withIdentifier: "segueToCalculator", sender: nil)
         default:
             break
         }

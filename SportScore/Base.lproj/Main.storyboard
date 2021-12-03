@@ -85,6 +85,7 @@
                         <segue destination="Qmw-FG-KEE" kind="show" identifier="segueToFootball" id="3Ei-nH-4lp"/>
                         <segue destination="LkR-9L-b0n" kind="presentation" identifier="segueToModal" id="9av-XN-qn9"/>
                         <segue destination="as8-uH-Ci1" kind="show" identifier="segueToMiniGame" id="iKV-3d-P6v"/>
+                        <segue destination="1mS-1A-aUr" kind="show" identifier="segueToCalculator" id="xvz-bQ-cYk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -514,12 +515,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oT0-wS-KA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1707" y="698"/>
+            <point key="canvasLocation" x="1748" y="94"/>
+        </scene>
+        <!--Calculator View Controller-->
+        <scene sceneID="hks-RI-aVa">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="1mS-1A-aUr" customClass="CalculatorViewController" customModule="SportScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xca-V3-RfI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Aem-0h-kPA">
+                                <rect key="frame" x="15" y="188" width="384" height="228"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzp-Oa-Xln">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1I-mk-UtS">
+                                        <rect key="frame" x="0.0" y="41.5" width="384" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4Dk-fj-c1l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hon-r0-q5z">
+                                        <rect key="frame" x="0.0" y="96.5" width="384" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ILt-n7-hcX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuK-mt-t4O">
+                                        <rect key="frame" x="0.0" y="151.5" width="384" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jtz-9l-5Ko"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tapCalculate:" destination="1mS-1A-aUr" eventType="touchUpInside" id="ulB-w8-VsY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqi-3x-YkA">
+                                        <rect key="frame" x="0.0" y="206.5" width="384" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dvd-y9-R3b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Aem-0h-kPA" firstAttribute="top" secondItem="Dvd-y9-R3b" secondAttribute="top" constant="100" id="5f1-Iv-4nc"/>
+                            <constraint firstItem="Aem-0h-kPA" firstAttribute="leading" secondItem="Dvd-y9-R3b" secondAttribute="leading" constant="15" id="gS3-2k-yto"/>
+                            <constraint firstItem="Dvd-y9-R3b" firstAttribute="trailing" secondItem="Aem-0h-kPA" secondAttribute="trailing" constant="15" id="zG1-ze-UmW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="r7R-zQ-WM3"/>
+                    <connections>
+                        <outlet property="betForm" destination="r1I-mk-UtS" id="t1c-4E-ldc"/>
+                        <outlet property="btnCalculate" destination="fuK-mt-t4O" id="hBn-gl-Gao"/>
+                        <outlet property="coefficientForm" destination="hon-r0-q5z" id="V27-TH-qUH"/>
+                        <outlet property="resultWin" destination="Nqi-3x-YkA" id="JcI-bx-Zcv"/>
+                        <outlet property="titleLabel" destination="bzp-Oa-Xln" id="9Wg-E6-1ek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EO3-on-IXG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="804"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

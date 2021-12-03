@@ -29,6 +29,7 @@
 		AC81AD2C27551A2200FB7A00 /* MainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81AD2B27551A2200FB7A00 /* MainResponse.swift */; };
 		AC81AD2E27551ACA00FB7A00 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81AD2D27551ACA00FB7A00 /* MainModel.swift */; };
 		AC81AD30275520E900FB7A00 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81AD2F275520E900FB7A00 /* ModalViewController.swift */; };
+		ACD4F317275AAC5E00BD29DC /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4F316275AAC5E00BD29DC /* CalculatorViewController.swift */; };
 		ACE1944A275376DF00CBB9EC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE19449275376DF00CBB9EC /* NewsViewController.swift */; };
 		ACE1944D27537B8500CBB9EC /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1944C27537B8500CBB9EC /* NewsModel.swift */; };
 		ACE1944F27537C5000CBB9EC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1944E27537C5000CBB9EC /* Networking.swift */; };
@@ -66,6 +67,7 @@
 		AC81AD2B27551A2200FB7A00 /* MainResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainResponse.swift; sourceTree = "<group>"; };
 		AC81AD2D27551ACA00FB7A00 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		AC81AD2F275520E900FB7A00 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		ACD4F316275AAC5E00BD29DC /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		ACE19449275376DF00CBB9EC /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		ACE1944C27537B8500CBB9EC /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		ACE1944E27537C5000CBB9EC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		AC4AD14D2752CC6100754769 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ACD4F315275AAC5E00BD29DC /* Calculator */,
 				AC81AD31275520F100FB7A00 /* Modal */,
 				AC6E4F6B2754D4BA00037585 /* Football */,
 				AC57F77D275A941800F5CA28 /* MiniGame */,
@@ -228,6 +231,14 @@
 				AC81AD2F275520E900FB7A00 /* ModalViewController.swift */,
 			);
 			path = Modal;
+			sourceTree = "<group>";
+		};
+		ACD4F315275AAC5E00BD29DC /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				ACD4F316275AAC5E00BD29DC /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		ACE1944B275376E900CBB9EC /* News */ = {
@@ -387,6 +398,7 @@
 				AC48324C2754AAFD00424196 /* BasketballModel.swift in Sources */,
 				AC81AD2E27551ACA00FB7A00 /* MainModel.swift in Sources */,
 				AC4AD14A2752C9BF00754769 /* Constants.swift in Sources */,
+				ACD4F317275AAC5E00BD29DC /* CalculatorViewController.swift in Sources */,
 				AC0183DB2753FFC4001665BC /* BasketballViewController.swift in Sources */,
 				ACE1945E27538CC900CBB9EC /* ImageNetworking.swift in Sources */,
 			);
