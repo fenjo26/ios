@@ -7,10 +7,6 @@ class BasketballViewController: UIViewController {
     
     var basketballList: [BasketballModel] = []
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

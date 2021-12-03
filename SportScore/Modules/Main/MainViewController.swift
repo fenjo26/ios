@@ -7,10 +7,6 @@ class MainViewController: UIViewController {
     
     var menuList: [MenuModel] = []
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -41,6 +37,8 @@ class MainViewController: UIViewController {
             MenuModel(imageName: Constants.Icons.news),
             MenuModel(imageName: Constants.Icons.football),
             MenuModel(imageName: Constants.Icons.basketball),
+            MenuModel(imageName: Constants.Icons.miniGame),
+            MenuModel(imageName: Constants.Icons.calculator),
         ]
         collectionView.reloadData()
     }
@@ -102,6 +100,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             performSegue(withIdentifier: "segueToFootball", sender: nil)
         case Constants.Icons.basketball:
             performSegue(withIdentifier: "segueToBasketball", sender: nil)
+        case Constants.Icons.miniGame:
+            performSegue(withIdentifier: "segueToMiniGame", sender: nil)
+        case Constants.Icons.calculator:
+            print("calculator")
+            //performSegue(withIdentifier: "segueToBasketball", sender: nil)
         default:
             break
         }

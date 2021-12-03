@@ -84,6 +84,7 @@
                         <segue destination="grB-Zm-Z6g" kind="show" identifier="segueToBasketball" id="OiA-by-STE"/>
                         <segue destination="Qmw-FG-KEE" kind="show" identifier="segueToFootball" id="3Ei-nH-4lp"/>
                         <segue destination="LkR-9L-b0n" kind="presentation" identifier="segueToModal" id="9av-XN-qn9"/>
+                        <segue destination="as8-uH-Ci1" kind="show" identifier="segueToMiniGame" id="iKV-3d-P6v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -472,6 +473,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ftt-EW-FpO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="935" y="94"/>
+        </scene>
+        <!--Mini Game View Controller-->
+        <scene sceneID="SXn-dX-lLn">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="as8-uH-Ci1" customClass="MiniGameViewController" customModule="SportScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ma-SP-I1n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 Очков" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki6-IW-Pcf">
+                                <rect key="frame" x="15" y="188" width="384" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XKT-r7-dPc">
+                                <rect key="frame" x="143" y="341.5" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0hf-Ny-gXt"/>
+                                    <constraint firstAttribute="width" constant="128" id="LMH-Ik-3pR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Ta-W8-23f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Ta-W8-23f" firstAttribute="trailing" secondItem="Ki6-IW-Pcf" secondAttribute="trailing" constant="15" id="73z-4g-ltI"/>
+                            <constraint firstItem="XKT-r7-dPc" firstAttribute="centerX" secondItem="7ma-SP-I1n" secondAttribute="centerX" id="GPj-rL-uxJ"/>
+                            <constraint firstItem="Ki6-IW-Pcf" firstAttribute="top" secondItem="8Ta-W8-23f" secondAttribute="top" constant="100" id="a8i-Hq-oKc"/>
+                            <constraint firstItem="Ki6-IW-Pcf" firstAttribute="leading" secondItem="8Ta-W8-23f" secondAttribute="leading" constant="15" id="bR7-sR-aoI"/>
+                            <constraint firstItem="XKT-r7-dPc" firstAttribute="top" secondItem="Ki6-IW-Pcf" secondAttribute="bottom" constant="120" id="l3Y-fz-TqU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ogy-ti-JJw"/>
+                    <connections>
+                        <outlet property="imageBall" destination="XKT-r7-dPc" id="Duj-lc-Mc9"/>
+                        <outlet property="scoreLabel" destination="Ki6-IW-Pcf" id="Qkd-yU-fue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oT0-wS-KA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707" y="698"/>
         </scene>
     </scenes>
     <resources>

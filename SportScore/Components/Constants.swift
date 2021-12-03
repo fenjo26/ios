@@ -16,6 +16,17 @@ struct Constants {
         static let news = "main.news"
         static let football = "main.football"
         static let basketball = "main.basketball"
+        static let miniGame = "main.mini_game"
+        static let calculator = "main.calculator"
+    }
+    
+    struct MiniGameImages {
+        static let background = "mini_game.background"
+        static let ball1 = "mini_game.ball1"
+    }
+    
+    struct MiniGameStrings {
+        static let scoreMeta = "Очков"
     }
     
     struct Urls {

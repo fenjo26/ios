@@ -17,6 +17,7 @@
 		AC4AD13E2752C87000754769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4AD13D2752C87000754769 /* Assets.xcassets */; };
 		AC4AD1412752C87000754769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4AD13F2752C87000754769 /* LaunchScreen.storyboard */; };
 		AC4AD14A2752C9BF00754769 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AD1492752C9BF00754769 /* Constants.swift */; };
+		AC57F782275A941800F5CA28 /* MiniGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57F780275A941800F5CA28 /* MiniGameViewController.swift */; };
 		AC6E4F662754D0A100037585 /* FootballService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E4F652754D0A100037585 /* FootballService.swift */; };
 		AC6E4F682754D17100037585 /* FootballResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E4F672754D17100037585 /* FootballResponse.swift */; };
 		AC6E4F6A2754D1C000037585 /* FootballModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E4F692754D1C000037585 /* FootballModel.swift */; };
@@ -53,6 +54,7 @@
 		AC4AD1402752C87000754769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC4AD1422752C87000754769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC4AD1492752C9BF00754769 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC57F780275A941800F5CA28 /* MiniGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniGameViewController.swift; sourceTree = "<group>"; };
 		AC6E4F652754D0A100037585 /* FootballService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballService.swift; sourceTree = "<group>"; };
 		AC6E4F672754D17100037585 /* FootballResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballResponse.swift; sourceTree = "<group>"; };
 		AC6E4F692754D1C000037585 /* FootballModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballModel.swift; sourceTree = "<group>"; };
@@ -167,11 +169,20 @@
 			children = (
 				AC81AD31275520F100FB7A00 /* Modal */,
 				AC6E4F6B2754D4BA00037585 /* Football */,
+				AC57F77D275A941800F5CA28 /* MiniGame */,
 				AC0183DC2753FFE4001665BC /* Basketball */,
 				ACE1944B275376E900CBB9EC /* News */,
 				AC4AD14C2752CBD500754769 /* Main */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		AC57F77D275A941800F5CA28 /* MiniGame */ = {
+			isa = PBXGroup;
+			children = (
+				AC57F780275A941800F5CA28 /* MiniGameViewController.swift */,
+			);
+			path = MiniGame;
 			sourceTree = "<group>";
 		};
 		AC6E4F6B2754D4BA00037585 /* Football */ = {
@@ -361,6 +372,7 @@
 				AC6E4F6F2754D4BA00037585 /* FootballCell.swift in Sources */,
 				AC6E4F662754D0A100037585 /* FootballService.swift in Sources */,
 				ACE1944A275376DF00CBB9EC /* NewsViewController.swift in Sources */,
+				AC57F782275A941800F5CA28 /* MiniGameViewController.swift in Sources */,
 				ACE19455275380F000CBB9EC /* NewsResponse.swift in Sources */,
 				AC81AD2C27551A2200FB7A00 /* MainResponse.swift in Sources */,
 				AC6E4F702754D4BA00037585 /* FootballViewController.swift in Sources */,
