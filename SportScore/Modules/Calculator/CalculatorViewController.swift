@@ -50,7 +50,7 @@ class CalculatorViewController: UIViewController {
         
         guard let bet = betForm.text, let coefficient = coefficientForm.text, !bet.isEmpty, !coefficient.isEmpty, let floatBet = Float(bet), let floatCoefficient = Float(coefficient) else { return }
         
-        var result = floatBet * floatCoefficient
+        let result = floatBet * floatCoefficient
         if NSString(format: "%.2f", result) == NSString(format: "%.2f", Float(Int(result))) {
             resultWin.text = "\(Constants.CalculatorStrings.win) \(Int(result))"
             resultWin.isHidden = false

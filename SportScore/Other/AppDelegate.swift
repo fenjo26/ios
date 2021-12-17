@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SportScore
+//  Score in Sports
 //
 //  Created by Artem Denis on 27.11.2021.
 //

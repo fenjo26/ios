@@ -11,7 +11,7 @@ class BasketballService {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         
-        var params = [
+        let params = [
             "timezone": "Europe/Moscow",
             "date": formatter.string(from: dateNow)
         ]

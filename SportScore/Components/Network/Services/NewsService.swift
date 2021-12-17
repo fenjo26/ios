@@ -11,7 +11,7 @@ class NewsService {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         
-        var params = [
+        let params = [
             "country": "ru",
             "category": "sport",
             "from": formatter.string(from: dateNow),

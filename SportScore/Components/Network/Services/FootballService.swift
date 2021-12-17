@@ -7,7 +7,7 @@ class FootballService {
     
     static func getFootball(complition: @escaping(FootballResponse) -> ()) {
         
-        var params = [
+        let params = [
             "limit": "30"
         ]
         

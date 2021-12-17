@@ -7,7 +7,7 @@ class MainlService {
     
     static func getMain(complition: @escaping(MainResponse) -> ()) {
         
-        var params = [String: String]()
+        let params = [String: String]()
         
         Networking.shared.getData(link: Constants.Urls.main, params: params, headers: [:]) { result in
             
