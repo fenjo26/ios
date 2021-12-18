@@ -24,10 +24,15 @@ struct Constants {
     struct MiniGameImages {
         static let background = "mini_game.background"
         static let ball1 = "mini_game.ball1"
+        static let gift = "mini_game.gift"
     }
     
     struct MiniGameStrings {
         static let scoreMeta = "Очков"
+    }
+    
+    struct MiniGameSettings {
+        static let giftScore = 10
     }
     
     struct CalculatorStrings {

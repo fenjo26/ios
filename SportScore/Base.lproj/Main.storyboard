@@ -490,10 +490,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XKT-r7-dPc">
-                                <rect key="frame" x="143" y="341.5" width="128" height="128"/>
+                                <rect key="frame" x="143" y="384" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0hf-Ny-gXt"/>
                                     <constraint firstAttribute="width" constant="128" id="LMH-Ik-3pR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qg9-M4-udZ">
+                                <rect key="frame" x="97" y="338" width="220" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="Uvq-qu-o12"/>
+                                    <constraint firstAttribute="height" constant="220" id="mNQ-ha-hWt"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -501,16 +508,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8Ta-W8-23f" firstAttribute="trailing" secondItem="Ki6-IW-Pcf" secondAttribute="trailing" constant="15" id="73z-4g-ltI"/>
+                            <constraint firstItem="Qg9-M4-udZ" firstAttribute="centerX" secondItem="7ma-SP-I1n" secondAttribute="centerX" id="83L-r7-6if"/>
                             <constraint firstItem="XKT-r7-dPc" firstAttribute="centerX" secondItem="7ma-SP-I1n" secondAttribute="centerX" id="GPj-rL-uxJ"/>
+                            <constraint firstItem="Qg9-M4-udZ" firstAttribute="centerY" secondItem="7ma-SP-I1n" secondAttribute="centerY" id="WyY-eu-GGz"/>
                             <constraint firstItem="Ki6-IW-Pcf" firstAttribute="top" secondItem="8Ta-W8-23f" secondAttribute="top" constant="100" id="a8i-Hq-oKc"/>
                             <constraint firstItem="Ki6-IW-Pcf" firstAttribute="leading" secondItem="8Ta-W8-23f" secondAttribute="leading" constant="15" id="bR7-sR-aoI"/>
-                            <constraint firstItem="XKT-r7-dPc" firstAttribute="top" secondItem="Ki6-IW-Pcf" secondAttribute="bottom" constant="120" id="l3Y-fz-TqU"/>
+                            <constraint firstItem="XKT-r7-dPc" firstAttribute="centerY" secondItem="7ma-SP-I1n" secondAttribute="centerY" id="xeg-9W-YD0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ogy-ti-JJw"/>
                     <connections>
                         <outlet property="imageBall" destination="XKT-r7-dPc" id="Duj-lc-Mc9"/>
+                        <outlet property="imageGift" destination="Qg9-M4-udZ" id="GhY-a5-AT1"/>
                         <outlet property="scoreLabel" destination="Ki6-IW-Pcf" id="Qkd-yU-fue"/>
+                        <segue destination="Mgo-j7-Qbc" kind="presentation" identifier="toGiftNews" id="2d9-rG-bfu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oT0-wS-KA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -593,8 +604,95 @@
             </objects>
             <point key="canvasLocation" x="1748" y="804"/>
         </scene>
+        <!--Gift News View Controller-->
+        <scene sceneID="Met-9C-Rny">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Mgo-j7-Qbc" customClass="GiftNewsViewController" customModule="SportScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cih-DP-wW0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-kU-u2b">
+                                <rect key="frame" x="379" y="59" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="U9v-Mo-Qc2"/>
+                                    <constraint firstAttribute="height" constant="20" id="V6o-qJ-qXG"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="xmark" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedClose:" destination="Mgo-j7-Qbc" eventType="touchUpInside" id="eGi-xG-Wr1"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGh-Ps-F9j">
+                                <rect key="frame" x="10" y="94" width="394" height="753"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HcV-HZ-svU">
+                                        <rect key="frame" x="8" y="8" width="378" height="311.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Bs-Kn-djQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="378" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="MW8-Sj-nXA"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ван Гал: завершил бы карьеру, если бы Нидерланды не вышли на ЧМ-2022" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Iq-rm-o1X">
+                                                <rect key="frame" x="0.0" y="160" width="378" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBN-5U-2Aj">
+                                                <rect key="frame" x="0.0" y="211" width="378" height="100.5"/>
+                                                <string key="text">Главный тренер сборной Нидерландов Луи ван Гал после победы над Норвегией (2:0) и выхода на ЧМ-2022 признался, что завершил бы карьеру, если бы его команда не сумела квалифицироваться на турнир в Катаре.
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="HcV-HZ-svU" firstAttribute="top" secondItem="cGh-Ps-F9j" secondAttribute="top" constant="8" id="7U3-Tf-0cR"/>
+                                    <constraint firstAttribute="trailing" secondItem="HcV-HZ-svU" secondAttribute="trailing" constant="8" id="GTg-Vw-yOT"/>
+                                    <constraint firstItem="HcV-HZ-svU" firstAttribute="leading" secondItem="cGh-Ps-F9j" secondAttribute="leading" constant="8" id="QY0-9h-wNU"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HcV-HZ-svU" secondAttribute="bottom" constant="8" id="S7y-MQ-Yri"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BPX-Fg-3iR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2cB-kU-u2b" firstAttribute="top" secondItem="BPX-Fg-3iR" secondAttribute="top" constant="15" id="0hH-At-MOM"/>
+                            <constraint firstItem="BPX-Fg-3iR" firstAttribute="trailing" secondItem="2cB-kU-u2b" secondAttribute="trailing" constant="15" id="1KD-ng-KgY"/>
+                            <constraint firstItem="cGh-Ps-F9j" firstAttribute="leading" secondItem="BPX-Fg-3iR" secondAttribute="leading" constant="10" id="4N8-Un-X0v"/>
+                            <constraint firstItem="BPX-Fg-3iR" firstAttribute="trailing" secondItem="cGh-Ps-F9j" secondAttribute="trailing" constant="10" id="biB-2q-Cef"/>
+                            <constraint firstItem="cGh-Ps-F9j" firstAttribute="top" secondItem="2cB-kU-u2b" secondAttribute="bottom" constant="15" id="nGn-ye-TNk"/>
+                            <constraint firstItem="BPX-Fg-3iR" firstAttribute="bottom" secondItem="cGh-Ps-F9j" secondAttribute="bottom" constant="15" id="qWf-vF-pKa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TJB-M1-Vck"/>
+                    <connections>
+                        <outlet property="btnClose" destination="2cB-kU-u2b" id="Q7j-4j-3oM"/>
+                        <outlet property="contentDescriptionLabel" destination="JBN-5U-2Aj" id="Wj1-CA-M5B"/>
+                        <outlet property="contentPhotoView" destination="0Bs-Kn-djQ" id="J15-ju-Uxb"/>
+                        <outlet property="contentStackView" destination="HcV-HZ-svU" id="0bw-H4-mod"/>
+                        <outlet property="contentTitleLabel" destination="1Iq-rm-o1X" id="z7I-jQ-WBP"/>
+                        <outlet property="contentView" destination="cGh-Ps-F9j" id="sEv-19-hVG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jev-CD-twh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2742" y="96"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

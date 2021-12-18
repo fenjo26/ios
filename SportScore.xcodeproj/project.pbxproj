@@ -40,6 +40,7 @@
 		ACE1945E27538CC900CBB9EC /* ImageNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1945D27538CC900CBB9EC /* ImageNetworking.swift */; };
 		ACF8A66527540825000A1098 /* BasketballService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8A66427540825000A1098 /* BasketballService.swift */; };
 		ACF8A667275409D5000A1098 /* BasketballResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8A666275409D5000A1098 /* BasketballResponse.swift */; };
+		ACFDED83276DD392000A73BD /* GiftNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDED82276DD392000A73BD /* GiftNewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		ACE1945D27538CC900CBB9EC /* ImageNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworking.swift; sourceTree = "<group>"; };
 		ACF8A66427540825000A1098 /* BasketballService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketballService.swift; sourceTree = "<group>"; };
 		ACF8A666275409D5000A1098 /* BasketballResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketballResponse.swift; sourceTree = "<group>"; };
+		ACFDED82276DD392000A73BD /* GiftNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftNewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		AC4AD14D2752CC6100754769 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ACFDED81276DD392000A73BD /* GiftNews */,
 				ACD4F315275AAC5E00BD29DC /* Calculator */,
 				AC81AD31275520F100FB7A00 /* Modal */,
 				AC6E4F6B2754D4BA00037585 /* Football */,
@@ -300,6 +303,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		ACFDED81276DD392000A73BD /* GiftNews */ = {
+			isa = PBXGroup;
+			children = (
+				ACFDED82276DD392000A73BD /* GiftNewsViewController.swift */,
+			);
+			path = GiftNews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,6 +385,7 @@
 				ACE1945127537DCB00CBB9EC /* NewsService.swift in Sources */,
 				ACE1944D27537B8500CBB9EC /* NewsModel.swift in Sources */,
 				AC6E4F682754D17100037585 /* FootballResponse.swift in Sources */,
+				ACFDED83276DD392000A73BD /* GiftNewsViewController.swift in Sources */,
 				AC4AD1392752C86F00754769 /* MainViewController.swift in Sources */,
 				AC4AD1352752C86F00754769 /* AppDelegate.swift in Sources */,
 				ACE1944F27537C5000CBB9EC /* Networking.swift in Sources */,
